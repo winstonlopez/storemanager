@@ -35,7 +35,7 @@ header {
     align-items: center;
 }
 
-#center-container{
+#centerContainer{
     height: inherit;
     min-width: 1200px;
     padding: 10px;
@@ -72,7 +72,7 @@ header {
 
 .drop-down {
     position: absolute;
-    height: 0px;
+    height: 100px;
     width: 100px;
     background-color: #212121;
     top: 35px;
