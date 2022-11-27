@@ -2,12 +2,28 @@
     box-sizing: border-box;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
 html, body {
     margin: 0;
     padding: 0;
     font-size: 16px;
+    font-family: "Helvetica Neue";
 }
 
+h1 {
+    margin: 0px;
+    padding: 0px;
+}
+
+h2 {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: #F8E7E2;
+}
 
 header {
     background-color: #212121;
@@ -23,10 +39,10 @@ header {
     height: inherit;
     min-width: 1200px;
     padding: 10px;
-    width: 75%;
+    width: 60%;
     color: #F8E7E2;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -40,7 +56,8 @@ header {
 }
 
 .menu {
-    width: 120px;
+    position: relative;
+    width: 100px;
     height: 100%;
     display: flex;
     justify-content: flex-start;
@@ -48,20 +65,136 @@ header {
     font-size: 1.2rem;
 }
 
+.menu:hover {
+    cursor: pointer;
+    color:rgb(200, 200, 200);
+}
+
+.drop-down {
+    position: absolute;
+    height: 0px;
+    width: 100px;
+    background-color: #212121;
+    top: 35px;
+    right: 0px
+}
+
 #searchbar {
     width: 300px;
     height: 100%;
     padding: 0px;
     font-size: 1.1rem;
-
+    background-color: #212121;
+    color: #F8E7E2;
+    border: 0px
 }
-
+#searchbar:hover {
+    border-bottom:rgb(165, 208, 232) 2px solid;
+}
+#searchbar:focus{
+    outline: none;
+}
 .account {
-    padding-left: 50px;
-    margin-left: 50px;;
+    justify-content: flex-end;
 }
 
-/*Media queries*/
+main {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+    gap: 20px;
+    flex-wrap: wrap;
+    
+
+}
+
+#welcome {
+    height: 250px;
+    width: 730px;
+    background-color: #067FC0;
+    background: linear-gradient(0deg, rgba(7,94,142,1) 0%, rgba(29,134,191,1) 48%, rgba(78,151,191,1) 100%);
+    border-radius: 5px;
+    padding: 20px 0px 20px 0px;
+}
+
+#welcome h1{
+    color: #FFFFFF;
+    margin: 0 30px 0 30px;
+    font-size: 2.2rem;
+    font-family: "Helvetica Neue";
+}
+#welcome p{
+    color: rgb(165, 208, 232);
+    margin: 10px 30px 0 30px;
+    font-size: 1.1rem;
+    font-family: "Helvetica Neue";
+}
+
+#about-btn {
+    border: 2px solid #FFFFFF;
+    height: 50px;
+    width: 300px;
+    display: flex;
+    margin: 30px;
+    margin-top: 50px;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    font-family: "Helvetica Neue";
+    font-size: 1.2rem;
+    border-radius: 5px;
+}
+
+#about-btn:hover{
+    background-color: #FFFFFF;
+    color:#067FC0;
+    cursor: pointer;
+}
+
+#log-section {
+    height: 250px;
+    width: 450px;
+    background-color: #E7E7E7;
+    padding: 25px;
+}
+
+#log-section h2{
+    color: rgb(44,45,48);
+}
+
+#log-section p{
+    color: rgb(117, 118, 123);
+}
+#log-container {
+    margin-top: 65px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+
+}
+
+.log-btn {
+    height: 40px;
+    width: 120px;
+    border: 2px solid #067FC0;
+    color: #067FC0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+}
+
+.log-btn:hover {
+    cursor: pointer;
+    background-color: #067FC0;
+    color:#E7E7E7;
+}
+
+/*Media queries for responsive web*/
 
 @media (min-width: 600px) and (max-width: 1100px) {
     #center-container {
@@ -87,4 +220,13 @@ header {
     #searchbar {
         display: none;
     }
+}
+
+/*Google fonts*/
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
 }
