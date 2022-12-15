@@ -11,7 +11,7 @@
 html, body {
     margin: 0;
     padding: 0;
-    font-size: 16px;
+    font-size: 15px;
     font-family: "Helvetica Neue";
 }
 
@@ -140,7 +140,7 @@ main {
 
 #welcome {
     height: 300px;
-    width: 725px;
+    width: 715px;
     background-color: #067FC0;
     background: linear-gradient(0deg, rgba(7,94,142,1) 0%, rgba(29,134,191,1) 48%, rgba(78,151,191,1) 100%);
     border-radius: 5px;
@@ -183,7 +183,7 @@ main {
 
 #log-section {
     height: 300px;
-    width: 445px;
+    width: 435px;
     background-color: #E7E7E7;
     padding: 25px;
 }
@@ -266,25 +266,48 @@ footer {
     width: 100%;
     background-color: #212121;
 }
+
+.expand-icon {
+    height: 30px;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    margin-top: 5px;
+    margin-left: -3px;
+}
 /*Media queries for responsive web*/
 
-@media (min-width: 600px) and (max-width: 1100px) {
-    #center-container {
+
+@media (min-width: 950px) and (max-width: 1200px) {
+    #centerContainer {
         width: 95%;
-        min-width: 500px;
+        min-width: 950px;
         justify-content: space-between;
+    }
+    header {
+        width: 100vw;
     }
     .menu {
         display: none;
     }
 
+    #welcome {
+        width: 60%;
+    }
+    #log-section {
+        width: 35%;
+    }
+    .feature {
+        width: 30%;
+    }
     
 }
 
-@media (max-width: 599px) {
-    #center-container {
+@media (min-width: 600px) and (max-width: 949px) {
+    #centerContainer {
         width: 100%;
-
+        min-width: 600px;
+        justify-content: space-between;
     }
     .menu {
         display: none;
@@ -294,11 +317,3 @@ footer {
     }
 }
 
-/*Google fonts*/
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 48
-}
