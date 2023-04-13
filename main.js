@@ -8,25 +8,22 @@ centerContainer.addEventListener('mouseover', function(event){
         elem.hidden = !elem.hidden;
 })
 
-Array.prototype.myMap = function(callback){
-
-  const newArray = [];
-
-  this.forEach((item, index, arr)=>newArray.push(callback(item,index,arr)));
-
-  return newArray;
-
+function letter(str){
+    let char = str.charCodeAt(0);
+    
+    for(let i = 0; i < str.length; i++){
+        if(!(str.charCodeAt(i) == (char + i))){
+            return String.fromCharCode(char + i).concat(letter(str.slice(i)));
+            
+        }
+    }
+    return ``;
 }
-let arr = [1,2,3,4,5,9];
+console.log(letter(`acdeg`));
 
+function destroyer(arr, ...items){
 
-console.log(arr.myMap(item => item * item));
-
-function factorial(num){
-  if(num <= 2){
-    return num;
-  }else{
-    return num * factorial(num -1);
-  }
+    return arr.filter(item => !items.includes(item))
 }
-console.log(factorial(2));
+
+console.log(destroyer([1,2,3,4,5,6], 1,3,5));
