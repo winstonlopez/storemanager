@@ -5,7 +5,16 @@ centerContainer.addEventListener('mouseover', function(event){
     if(!event.target.closest('span.menu, span.menu account'))return;    //if not on menu, do nothing
 
     let elem = event.target.closest(`span.menu, span.menu account`).querySelector('span.drop-down');
-        elem.hidden = !elem.hidden;
+
+        elem.hidden = false;
+})
+
+centerContainer.addEventListener(`mouseout`, (event)=>{
+    let elem = event.target.closest(`span.menu`).querySelector(`span.drop-down`);
+    console.log(elem);
+
+    elem.hidden = true;
+    
 })
 
 function letter(str){

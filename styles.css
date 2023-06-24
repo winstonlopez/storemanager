@@ -13,7 +13,7 @@ html, body {
     padding: 0;
     font-size: 15px;
     font-family: "Helvetica Neue";
-    height: 100%;
+   
 }
 
 h1 {
@@ -146,12 +146,13 @@ main {
 }
 
 #welcome {
-    height: 300px;
+    min-height: 300px;
     width: 715px;
     background-color: #067FC0;
     background: linear-gradient(0deg, rgba(7,94,142,1) 0%, rgba(29,134,191,1) 48%, rgba(78,151,191,1) 100%);
     border-radius: 5px;
     padding: 20px 0px 20px 0px;
+    text-align: justify;
 }
 
 #welcome h1{
@@ -231,7 +232,7 @@ main {
 
 .feature {
     width: 380px;
-    height: 400px;
+    max-height: 400px;
     background-color: #FFFFFF;
     border: 1px solid #c4c4c4;
     border-radius: 5px;
@@ -310,6 +311,7 @@ footer {
     }
     .feature {
         width: 30%;
+        height: 200px;
     }
     
 }
@@ -337,6 +339,7 @@ footer {
     #feature-container {
         display: flex;
         flex-flow: column;
+        height: 200px;
     }
     .feature {
         width: 100%;
@@ -346,6 +349,7 @@ footer {
         position: relative;
         padding-right: 300px;
         height: 200px;
+        min-height: 200px
     }
     .feature-img {
         position: absolute;
