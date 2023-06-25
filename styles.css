@@ -54,6 +54,7 @@ header {
     position: fixed;
     justify-content: center;
     align-items: center;
+    z-index: 3;
 }
 
 #centerContainer{
@@ -245,6 +246,7 @@ main {
     background-color: #FFFFFF;
     border: 1px solid #c4c4c4;
     border-radius: 5px;
+    z-index: 0;
 }
 .feature:hover {
     cursor: pointer;
@@ -307,6 +309,7 @@ footer {
     }
     header {
         width: 100vw;
+        z-index: 3;
     }
     .menu {
         display: none;
@@ -402,6 +405,9 @@ footer {
         margin: 10px;
         padding: 0;
     }
-  
+    
+    #header {
+        z-index: 3;
+    }
 }
 
