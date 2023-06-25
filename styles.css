@@ -351,7 +351,7 @@ footer {
         height: auto;
     }
     .feature {
-        width: 100%;
+        width: 100vw;
         border-radius: 0;
         display: flex;
         flex-flow: column;
@@ -365,7 +365,10 @@ footer {
         right: 0px;
         height: 100%;
         margin-left: 10px;
-        margin-right: 30px;
+        margin-right: 10px;
+        padding: 0;
+        width: 50%;
+        
     }
     #log-container {
         justify-content: flex-end;
@@ -394,8 +397,10 @@ footer {
     }
 
     #inventory-img  {
-        width: 200px;
-        height: 200px;
+        width: 150px;
+        height: 150px;
+        margin: 10px;
+        padding: 0;
     }
   
 }
