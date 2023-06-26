@@ -1,8 +1,13 @@
 'use strict'
 
+//----------------------------mousover on menu element----------------------------------------------//
+/* note:: everytime the pointer moves to a different element a mouseover/mouseout triggers, it doesnt matter if they are both inside the parent element that has event */
 
 centerContainer.addEventListener('mouseover', function(event){
-    if(!event.target.closest('span.menu, span.menu account'))return;    //if not on menu, do nothing
+    console.log(`mouseover triggered`);
+    if(!event.target.closest('span.menu'))return;    //if not on menu, do nothing
+
+    
 
     let elem = event.target.closest(`span.menu, span.menu account`).querySelector('span.drop-down');
 
@@ -10,10 +15,14 @@ centerContainer.addEventListener('mouseover', function(event){
 })
 
 centerContainer.addEventListener(`mouseout`, (event)=>{
+    if(event.relatedTarget.closest(`span.menu`)){return};   //if you are still inside span.menu do nothing
+    console.log(`mouseout triggered`);
+ 
     let elem = event.target.closest(`span.menu`).querySelector(`span.drop-down`);
-    console.log(elem);
-
+     
     elem.hidden = true;
+
+     console.log(`hide occured!`);
     
 })
 
@@ -31,8 +40,6 @@ function letter(str){
 console.log(letter(`acdeg`));
 
 function destroyer(arr, ...items){
-
     return arr.filter(item => !items.includes(item))
 }
-
-console.log(destroyer([1,2,3,4,5,6], 1,3,5));
+console.log(destroyer([1,2,3,4,5],1,2,3));

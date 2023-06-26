@@ -8,6 +8,11 @@
     src: url(./fonts/RobotoSlab-VariableFont_wght.ttf);
 }
 
+@font-face {
+    font-family: "doctor glitch";
+    src: url(./fonts/Doctor-Glitch.otf);
+}
+
 html, body {
     margin: 0;
     padding: 0;
@@ -60,9 +65,8 @@ header {
 }
 
 #centerContainer{
-    height: inherit;
+    height: 100%;
     min-width: 1200px;
-    padding: 10px;
     width: 60%;
     color: #F8E7E2;
     display: flex;
@@ -77,6 +81,7 @@ header {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    font-family: "doctor glitch";
 }
 
 .menu {
@@ -87,6 +92,8 @@ header {
     justify-content: flex-start;
     align-items: center;
     font-size: 1.1rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .menu:hover {
@@ -97,19 +104,24 @@ header {
 .drop-down {
     position: absolute;
     width: 150px;
-    background-color: #212121;
-    top: 35px;
+    background-color: white;
+    top: 55px;
     right: 0px;
     justify-items: center;
     flex-direction: column;
     align-items: flex-end;
-
+    
 }
 
 .drop-down .drop-menu {
-    color: white;
+    color: black;
     padding: 10px;
     text-align: end;
+    font-size: 14px;
+    font-family: "roboto slab";
+}
+.drop-menu:hover {
+    color: darkgray;
 }
 
 #searchbar {
@@ -300,6 +312,19 @@ footer {
     margin-top: 5px;
     margin-left: -3px;
 }
+
+.triangle   {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid white;
+    position: absolute;
+    top: -10px;
+    right: 0;
+}
+
+
 /*Media queries for responsive web*/
 
 
