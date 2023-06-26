@@ -15,9 +15,11 @@ centerContainer.addEventListener('mouseover', function(event){
 })
 
 centerContainer.addEventListener(`mouseout`, (event)=>{
+    if(event.relatedTarget){    //skip this part if the pointer went outside window
     if(event.relatedTarget.closest(`span.menu`)){return};   //if you are still inside span.menu do nothing
+        }
     console.log(`mouseout triggered`);
- 
+    
     let elem = event.target.closest(`span.menu`).querySelector(`span.drop-down`);
      
     elem.hidden = true;
