@@ -28,20 +28,8 @@ centerContainer.addEventListener(`mouseout`, (event)=>{
     
 })
 
-function letter(str){
-    let char = str.charCodeAt(0);
-    
-    for(let i = 0; i < str.length; i++){
-        if(!(str.charCodeAt(i) == (char + i))){
-            return String.fromCharCode(char + i).concat(letter(str.slice(i)));
-            
-        }
-    }
-    return ``;
-}
-console.log(letter(`acdeg`));
+let search = document.getElementById(`searchbar`);
 
-function destroyer(arr, ...items){
-    return arr.filter(item => !items.includes(item))
-}
-console.log(destroyer([1,2,3,4,5],1,2,3));
+search.addEventListener(`keypress`, (event)=>{
+    alert(event.key);
+})
